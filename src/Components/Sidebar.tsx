@@ -1,14 +1,48 @@
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaSearch, FaUser } from "react-icons/fa";
+import { IoMdSettings } from "react-icons/io";
 
 const Sidebar = () => {
   return (
     <aside className="sidebar fixed top-0 h-screen w-20 bg-[#1A1C1E] text-white">
-      <ul className="p-4 flex-col justify-between items-center h-full">
+      <ul className="p-4 flex flex-col justify-between items-center h-full">
         <div className="top">
           <li className="mb-2">
             <div className="flex items-center">
-              <FaHome className="mr-2 mb-3" size={18} />
+              <FaHome
+                className="mr-2 mb-3 hover:text-blue-500 transition-colors cursor-pointer"
+                size={18}
+              />
             </div>
+          </li>
+          <li className="mb-2">
+            <div className="flex items-center">
+              <FaUser
+                className="mr-2 mb-3 hover:text-blue-500 transition-colors cursor-pointer"
+                size={18}
+              />
+            </div>
+          </li>
+
+          <li className="mb-2">
+            <div className="flex items-center">
+              <FaSearch
+                className="mr-2 mb-3 hover:text-blue-500 transition-colors cursor-pointer"
+                size={18}
+              />
+            </div>
+          </li>
+        </div>
+
+        <div className="bottom mt-auto">
+          <li className="flex flex-col gap-5">
+            <IoMdSettings
+              className="hover:text-blue-500 transition-colors cursor-pointer"
+              size={18}
+            />
+            <FaUser
+              className="hover:text-blue-500 transition-colors cursor-pointer"
+              size={18}
+            />
           </li>
         </div>
       </ul>
