@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaCamera } from "react-icons/fa";
 import Stats from "./Stats";
+import Testimonials from "./Testimonials";
 
 const Profile = () => {
   const [bannerUrl, setBannerUrl] = useState("/banner.jpg");
@@ -82,6 +83,9 @@ const Profile = () => {
         </div>
       </div>
       <Stats />
+      <div>
+        <Testimonials />
+      </div>
     </div>
   );
 };
